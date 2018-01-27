@@ -4,8 +4,8 @@ import time
 import glob
 
 path = os.getcwd()
-directory = path + os.path.join('\\DEAR_import\\')
-dir_dst = directory + '\\DEAR_Archive\\'
+directory = path + os.path.join('\\PATH_TO_DHL_FOLDER\\')
+dir_dst = directory + '\\MAKE_SURE_THIS_FOLDER_EXISTS_IN_THE_DEAR_FOLDER\\'
 timestr = time.strftime("%Y%m%d-%H%M%S")
 
 def moveFiles():
