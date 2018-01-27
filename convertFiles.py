@@ -6,8 +6,8 @@ import renameFiles
 import pycountry
 
 path = os.getcwd()
-DHL_export = path + '\\DHL_export\\'
-dir_src = path + os.path.join('\\DEAR_import\\')
+DHL_export = path + '\\PATH_TO_DHL_FOLDER\\'
+dir_src = path + os.path.join('\\DEAR_IMPORT_FOLDER\\')
 
 def checkCsvFiles():
     for root,dirs,files in os.walk(dir_src):
@@ -44,7 +44,7 @@ def readFiles(dear_files):
             emailaddress = row[17]
 
 
-
+            #Remove cities that have a comma in them
             if ',' in City:
                 #print('There is a comma')
                 City = City.replace(',','')
@@ -54,6 +54,7 @@ def readFiles(dear_files):
                 text_file = open(DHL_export + timestr + '_exportDHL.txt', 'a')
 
                 #Convert the contry to an alpha 2 code
+                #Do not check the first line
             if CountryCode == "ShippingCountry*":
                 continue
 

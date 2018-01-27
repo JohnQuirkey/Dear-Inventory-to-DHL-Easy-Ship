@@ -1,6 +1,6 @@
 import pycountry
 
-
+#Test file to convert full name countries to 2 alpha Code names e.g. IE
 input_countries = ['Denmark', "United Kingdom", "China", "AU", "Ireland"]
 
 def changeCountryCode(country):
